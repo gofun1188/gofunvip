@@ -2902,3 +2902,35 @@ section.block-11 .content .text-subtit a:hover {
   );
   z-index: 2;
 }
+
+@media screen and (max-width: 768px) {
+  /* 保持原有布局结构不变 */
+
+  /* 调整手机图片 - 缩小尺寸并下移 */
+  section.block-3 .content .content-in.pic .phone {
+    top: 60%; /* 保持向下移动 */
+    left: 10%;
+    width: 200%; /* 缩小图片尺寸 */
+    max-width: 380px;
+  }
+
+  /* 调整光效匹配手机位置 */
+  section.block-3 .content .content-in.pic .light {
+    bottom: -10%;
+    transform: translate(-50%, 0%);
+    width: 100%; /* 缩小光效尺寸 */
+  }
+}
+
+/* 针对更小屏幕 */
+@media screen and (max-width: 480px) {
+  section.block-3 .content .content-in.pic .phone {
+    top: 65%;
+    width: 180%; /* 在更小的屏幕上进一步缩小 */
+    max-width: 320px;
+  }
+
+  section.block-3 .content .content-in.pic .light {
+    width: 90%;
+  }
+}
