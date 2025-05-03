@@ -429,7 +429,7 @@ section.block-2 .logo_content .home-logo-light1 {
 }
 section.block-2 .logo_content .home-logo {
   margin: auto;
-  --home-logo-w: 65%;
+  --home-logo-w: 95%; /* Increased from 65% to 85% */
   width: var(--home-logo-w);
   padding-top: calc(var(--home-logo-w) * 500 / 800);
   background-image: url("./img1/logo.png");
