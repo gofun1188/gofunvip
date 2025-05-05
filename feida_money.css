@@ -136,12 +136,12 @@ body::before {
   display: block;
 }
 .footer-button .footer-text-g .footer-text:nth-child(1) {
-  box-shadow: inset 0 0rem 0.5rem 0.1rem rgba(2, 51, 47, 0.664);
+  box-shadow: inset 0 0rem 0.5rem 0.1rem rgba(1, 31, 73, 0.664); /* 修改為藍色陰影 */
   border-right: 0.28rem solid rgba(255, 255, 255, 0.5019607843);
   background: linear-gradient(
     315deg,
-    rgba(17, 245, 194, 0.55),
-    rgba(55, 220, 237, 0.25),
+    rgba(41, 121, 255, 0.55), /* 改為亮藍色 */
+    rgba(0, 183, 255, 0.25),  /* 改為淺藍色 */
     rgba(0, 0, 0, 0)
   );
 }
@@ -149,12 +149,12 @@ body::before {
   margin-left: 0.5rem;
 }
 .footer-button .footer-text-g .footer-text:nth-child(1):hover {
-  box-shadow: inset 0 0rem 0.5rem 0.2rem rgba(1, 31, 28, 0.781);
+  box-shadow: inset 0 0rem 0.5rem 0.2rem rgba(1, 31, 73, 0.781); /* 修改為藍色陰影 */
   transition: 0.2s;
   background: linear-gradient(
     315deg,
-    rgba(17, 245, 194, 0.7),
-    rgba(55, 220, 237, 0.62),
+    rgba(41, 121, 255, 0.7), /* 懸停時更亮的藍色 */
+    rgba(0, 183, 255, 0.62), /* 懸停時更亮的淺藍色 */
     rgba(0, 0, 0, 0)
   );
 }
@@ -163,11 +163,11 @@ body::before {
   transform: scale(1.05);
 }
 .footer-button .footer-text-g .footer-text:nth-child(2) {
-  box-shadow: inset 0 0rem 0.5rem 0.1rem rgba(73, 30, 1, 0.65);
+  box-shadow: inset 0 0rem 0.5rem 0.1rem rgba(1, 31, 73, 0.65); /* 修改為藍色陰影 */
   background: linear-gradient(
     45deg,
-    rgba(255, 120, 0, 0.55),
-    rgba(233, 237, 55, 0.25),
+    rgba(0, 102, 255, 0.55), /* 改為深藍色 */
+    rgba(70, 178, 255, 0.25), /* 改為中藍色 */
     rgba(0, 0, 0, 0)
   );
 }
@@ -175,12 +175,12 @@ body::before {
   margin-right: 0.5rem;
 }
 .footer-button .footer-text-g .footer-text:nth-child(2):hover {
-  box-shadow: inset 0 0rem 0.5rem 0.2rem rgba(73, 30, 1, 0.8);
+  box-shadow: inset 0 0rem 0.5rem 0.2rem rgba(1, 31, 73, 0.8); /* 修改為藍色陰影 */
   transition: 0.2s;
   background: linear-gradient(
     45deg,
-    rgba(255, 120, 0, 0.7),
-    rgba(233, 237, 55, 0.5),
+    rgba(0, 102, 255, 0.7), /* 懸停時更亮的深藍色 */
+    rgba(70, 178, 255, 0.5), /* 懸停時更亮的中藍色 */
     rgba(0, 0, 0, 0)
   );
 }
@@ -2576,15 +2576,17 @@ section.block-10 .content {
   background-size: cover;
   position: relative;
 }
+
 section.block-10 .content > div {
   transform: translateX(-50%) perspective(500px) rotateX(10deg);
   position: absolute;
   width: 67%;
   height: 45%;
   margin: auto;
-  top: 7.5%;
-  left: 51%;
+  top: 2%;
+  left: 49%;
 }
+
 section.block-10 .content > div .logo_in {
   position: absolute;
   height: 100%;
@@ -2594,6 +2596,10 @@ section.block-10 .content > div .logo_in {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2%;
+  padding: 1.5% 2% 2% 1.5%;  /* 進一步減少左上邊距 */
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
@@ -2613,9 +2619,11 @@ section.block-10 .content > div .logo_in {
   animation: retro-future-tv-lines linear infinite;
   animation-duration: 500ms;
 }
+
 section.block-10 .content > div .logo_in div {
-  flex: 0 0 30%;
-  margin: 0.3rem;
+  flex: 0 0 31%;
+  height: calc(100% / 6 - 2%);
+  margin: 0;
   position: relative;
   background: linear-gradient(
     45deg,
@@ -2624,18 +2632,30 @@ section.block-10 .content > div .logo_in div {
   );
   display: flex;
   justify-content: center;
-  display: flex;
-  justify-content: center;
+  align-items: center;
   transform: translateZ(2px);
   z-index: 5;
 }
+
 section.block-10 .content > div .logo_in div img {
+  max-width: 85%;
+  max-height: 75%;
   object-fit: contain;
   object-position: center;
   filter: hue-rotate(340deg);
 }
+
 section.block-10 .content > div .logo_in div:nth-child(odd) img {
   filter: hue-rotate(320deg);
+}
+
+/* ABA logo保持原始顏色 */
+section.block-10 .content > div .logo_in div:nth-child(9) {
+  background: rgba(139, 69, 19, 0.2);
+}
+
+section.block-10 .content > div .logo_in div:nth-child(9) img {
+  filter: none;
 }
 @keyframes retro-future-tv-lines {
   0% {
@@ -2653,7 +2673,7 @@ section.block-10 .slogan {
 }
 section.block-10 .slogan .slogan_in {
   position: absolute;
-  top: 0;
+  top: 2.5%;  /* 將這個值從 0 改為 5% 或任何你想要的值 */
   left: 0;
   width: 100%;
   -webkit-animation: shake 600ms ease-in-out infinite alternate;
@@ -2932,5 +2952,71 @@ section.block-11 .content .text-subtit a:hover {
 
   section.block-3 .content .content-in.pic .light {
     width: 90%;
+  }
+}
+
+/* Enlarging the footer buttons */
+.footer-button {
+  max-width: var(--width-max);
+  width: 100%;
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 50;
+  pointer-events: painted;
+  filter: drop-shadow(0px -0.2rem 0.2rem #000);
+  cursor: pointer;
+  /* Increase the scale slightly */
+  transform: translate(-50%, 0%) scale(1.15);
+}
+
+.footer-button .footer-text-g .footer-text {
+  font-size: 1.8rem; /* Increased from 1.5rem */
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  width: calc(50% - 0.14rem);
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0 0.6rem; /* Increased padding */
+}
+
+.footer-button .footer-text-g .footer-text a img {
+  width: 14rem; /* Increased from 12rem */
+  margin: auto;
+  display: block;
+}
+
+/* Enhanced hover effects */
+.footer-button .footer-text-g .footer-text:hover img {
+  transition: 0.2s;
+  transform: scale(1.08); /* Slightly increased scale on hover */
+}
+
+/* Make sure the buttons have enough space at the bottom of the page */
+body {
+  padding-bottom: 5rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .footer-button {
+    transform: translate(-50%, 0%) scale(1.1);
+  }
+
+  .footer-button .footer-text-g .footer-text {
+    font-size: 1.6rem;
+    padding: 0.7rem 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-button {
+    transform: translate(-50%, 0%) scale(1.05);
+  }
+
+  .footer-button .footer-text-g .footer-text {
+    font-size: 1.5rem;
+    padding: 0.6rem 0 0.4rem;
   }
 }
