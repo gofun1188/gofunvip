@@ -3163,13 +3163,107 @@ section.block-activity .content .text-subtit::before {
   transform: perspective(2500px) rotateX(0);
   opacity: 1;
 }
+
+
+/* 營銷橫幅整體容器樣式 */
+.marketing-banner {
+  position: relative;
+  width: 90%;
+  margin: 20px auto 40px;
+  padding: 25px 20px;
+  z-index: 5;
+}
+
+/* 標題樣式 */
+.marketing-title {
+  font-family: "Chakra Petch", "Noto Sans TC", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7fffd4;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem #000,
+               0.15rem 0.15rem 0.5rem rgba(0, 255, 187, 0.6);
+  letter-spacing: 0.1rem;
+  margin-bottom: 15px;
+  transform: scaleY(1.05);
+  position: relative;
+  z-index: 2;
+  padding: 5px 0;
+  background: linear-gradient(90deg,
+              rgba(0, 0, 0, 0),
+              rgba(38, 215, 194, 0.15) 20%,
+              rgba(223, 133, 23, 0.15) 80%,
+              rgba(0, 0, 0, 0));
+}
+
+/* 營銷內容區塊樣式 */
+.marketing-content {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  padding: 0 10px;
+  position: relative;
+}
+
+/* 內容段落樣式 */
+.marketing-content p {
+  margin-bottom: 10px;
+  text-shadow: 0rem 0rem 0.2rem #000,
+               0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/* 特別強調的亮點文字 */
+.marketing-content .highlight {
+  color: #ffe200;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  position: relative;
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* 文字脈動效果 */
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 5px rgba(255, 226, 0, 0.7);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 226, 0, 1);
+  }
+}
+
+/* 響應式設計 - 適應小螢幕 */
+@media screen and (max-width: 768px) {
+  .marketing-banner {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  .marketing-title {
+    font-size: 1.5rem;
+  }
+
+  .marketing-content p {
+    font-size: 1.1rem;
+  }
+
+  .marketing-content .highlight {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
 </style>
 
-<!-- 移除不必要的 JavaScript -->
+
 <script>
-// 只保留必要的特殊字符處理
+
 document.addEventListener('DOMContentLoaded', function() {
-  // 處理頁面中的百分比符號
+
   const percentElements = document.querySelectorAll('.text-subtit');
   percentElements.forEach(item => {
     item.innerHTML = item.innerHTML.replace(/(\d+)%/g, '$1<span class="special-text">%</span>');
