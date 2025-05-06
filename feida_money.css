@@ -2965,68 +2965,215 @@ section.block-11 .content .text-subtit a:hover {
   }
 }
 
-/* Enlarging the footer buttons */
-.footer-button {
-  max-width: var(--width-max);
-  width: 100%;
-  position: fixed;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  z-index: 50;
-  pointer-events: painted;
-  filter: drop-shadow(0px -0.2rem 0.2rem #000);
-  cursor: pointer;
-  /* Increase the scale slightly */
-  transform: translate(-50%, 0%) scale(1.15);
+.percent-symbol {
+  font-family: Arial, sans-serif; /* 使用更標準的字體顯示百分比 */
+  display: inline-block;
+  position: relative;
+  top: 0;
+  font-weight: 700;
 }
 
-.footer-button .footer-text-g .footer-text {
-  font-size: 1.8rem; /* Increased from 1.5rem */
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  width: calc(50% - 0.14rem);
+.uppercase {
+  text-transform: uppercase; /* 英文設為大寫 */
+}
+
+.lowercase {
+  text-transform: lowercase; /* 英文設為小寫 */
+}
+.special-text {
+  font-family: Arial, "Noto Sans TC", sans-serif;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-family: "Chakra Petch", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.telegram-name {
+  font-family: "Chakra Petch", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* 活動頁面專用樣式 - 整頁背景與滑動特效 */
+section.block-activity {
+  z-index: 4;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  position: relative;
+  /* 使用底圖png.png作為整頁背景 */
+  background-image: url("./img1/底圖png.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 保留邊框樣式 */
+  border: solid;
+  border-width: 0.1rem 0;
+  border-color: #17b3b3 rgba(0, 0, 0, 0) #9f9727;
+}
+
+/* 添加覆蓋層，提高文字可讀性 */
+section.block-activity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明黑色覆蓋 */
+  z-index: -1;
+}
+
+section.block-activity .title {
+  margin: auto;
+  width: 100%;
+  padding-top: 22.2222222222%;
+  background-image: url("./img1/標題.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 3%;
+}
+
+section.block-activity .content {
+  width: 88%;
+  padding: 0% 6%;
+  position: relative;
+  z-index: 1;
+}
+
+/* 內文圖片容器 - 放大圖片 */
+.activity-content {
+  width: 100%;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
-  padding: 0.8rem 0 0.6rem; /* Increased padding */
 }
 
-.footer-button .footer-text-g .footer-text a img {
-  width: 14rem; /* Increased from 12rem */
-  margin: auto;
+/* 圖片樣式 - 移除邊框特效 */
+.activity-content-img {
+  max-width: 105%; /* 保持放大尺寸 */
+  border-radius: 0px; /* 移除圓角 */
+  border: none; /* 移除邊框 */
+  box-shadow: none; /* 移除陰影效果 */
+  transition: transform 0.3s ease;
+}
+
+/* 懸停效果 - 讓圖片在滑鼠懸停時稍微放大 */
+.activity-content-img:hover {
+  transform: scale(1.02);
+}
+
+/* 表格樣式 - 與代理線額外激勵獎金相同 */
+section.block-activity .content table {
+  margin-bottom: 1rem;
+  --table-border: 3px solid #ffffff99;
+  text-align: center;
+  width: 100%;
+  border-spacing: 0px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-shadow: 0.1rem 0.1rem 0.2rem #000;
+}
+
+section.block-activity .content table thead.sub-tit {
+  font-size: 1.6rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+section.block-activity .content table thead.sub-tit tr {
+  background: rgba(0, 0, 0, 0);
+}
+
+section.block-activity .content table thead.sub-tit tr th {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: none;
+  box-shadow: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem #000, -2rem 0rem 0.8rem #00dfff, 2rem 0rem 1rem #ffa700;
+  padding: 1rem 0.5rem;
+}
+
+/* 文字說明樣式 - 與代理線額外激勵獎金相同 */
+section.block-activity .content .text-subtit {
   display: block;
+  text-shadow: 0rem 0rem 0.2rem #000, 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8), 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+  --t-sub-pl: 1.2rem;
+  padding-left: calc(var(--t-sub-pl) + 0.5rem);
+  position: relative;
+  font-size: 1.2rem;
 }
 
-/* Enhanced hover effects */
-.footer-button .footer-text-g .footer-text:hover img {
-  transition: 0.2s;
-  transform: scale(1.08); /* Slightly increased scale on hover */
+section.block-activity .content .text-subtit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--t-sub-pl);
+  height: var(--t-sub-pl);
+  top: 0.15rem;
+  left: 0%;
+  background-image: url("./img1/table_icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
-/* Make sure the buttons have enough space at the bottom of the page */
-body {
-  padding-bottom: 5rem;
+/* 特殊文字樣式 */
+.special-text {
+  font-family: Arial, "Noto Sans TC", sans-serif;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  color: #ffe200;
 }
 
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-  .footer-button {
-    transform: translate(-50%, 0%) scale(1.1);
-  }
-
-  .footer-button .footer-text-g .footer-text {
-    font-size: 1.6rem;
-    padding: 0.7rem 0 0.5rem;
-  }
+.brand-name {
+  font-family: "Chakra Petch", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #7fffd4;
 }
 
-@media screen and (max-width: 480px) {
-  .footer-button {
-    transform: translate(-50%, 0%) scale(1.05);
-  }
-
-  .footer-button .footer-text-g .footer-text {
-    font-size: 1.5rem;
-    padding: 0.6rem 0 0.4rem;
-  }
+/* 添加元素進入動畫的額外效果 */
+[data-aos="fade-up"] {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  transition-property: transform, opacity;
 }
+
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-aos="flip-down"] {
+  transform: perspective(2500px) rotateX(-100deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="flip-down"].aos-animate {
+  transform: perspective(2500px) rotateX(0);
+  opacity: 1;
+}
+</style>
+
+<!-- 移除不必要的 JavaScript -->
+<script>
+// 只保留必要的特殊字符處理
+document.addEventListener('DOMContentLoaded', function() {
+  // 處理頁面中的百分比符號
+  const percentElements = document.querySelectorAll('.text-subtit');
+  percentElements.forEach(item => {
+    item.innerHTML = item.innerHTML.replace(/(\d+)%/g, '$1<span class="special-text">%</span>');
+    item.innerHTML = item.innerHTML.replace(/GoFun/g, '<span class="brand-name">GoFun</span>');
+  });
+});
+</script>
