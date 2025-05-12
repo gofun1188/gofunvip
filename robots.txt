@@ -1,25 +1,22 @@
+
 User-agent: *
-Allow: /
-Sitemap: https://gofun886.com/sitemap.xml
-
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /admin/
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /feida_money.js
+Sitemap: https://gofun886.com/sitemap.xml
 
+# 2. Googlebot 網頁
+User-agent: Googlebot
+Allow: /
 
+# 3. Googlebot 圖片
 User-agent: Googlebot-Image
-Allow: /img1/
+Allow: /
+
+# 4. Bingbot
+User-agent: Bingbot
+Allow: /
+
+
+User-agent: Baiduspider
+Disallow: /feida_money.js
