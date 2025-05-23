@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://gofun886.vip/</loc>
-    <lastmod>2025-05-12</lastmod> 
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-    <xhtml:link rel="alternate" hreflang="zh-Hant-TW" href="https://gofun886.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant-KH" href="https://gofun886.com/"/>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://gofun886.vip/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/taiwan/taipei</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/taiwan/taichung</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/taiwan/kaohsiung</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/cambodia/phnom-penh</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/cambodia/sihanoukville</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gofun886.vip/cambodia/siem-reap</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
